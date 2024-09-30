@@ -7,9 +7,14 @@ function displayScreen(){
   for(let i=0; i< buttons.length; i++){
     buttons[i].addEventListener("click", ()=>{
 
+      console.log(buttons[i].value)
+
       if(!isNaN(buttons[i].value)){
         amount += buttons[i].value;
         console.log(amount)
+      }
+      if(amount.length > 10){
+        amount = `TOO LARGE`;
       }
 
 
@@ -26,10 +31,10 @@ function displayScreen(){
     
       }
       if(buttons[i].value === "dot"){
-
+        amount += `.`;
       }
       if(buttons[i].value === "delete"){
-
+        amount = amount.slice(0, -1);
       }
       if(buttons[i].value === "equal"){
 
