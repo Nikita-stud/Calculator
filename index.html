@@ -1,43 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <title>Calculator | Basics</title>
+  <meta name="description" content="I ve made my own calculator that does basic math using js">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="styles.css">
   <script src="https://kit.fontawesome.com/54f19440a6.js" crossorigin="anonymous"></script>
+  <script defer src="calculatos.js"></script>
 </head>
 <body>
   <header>
-
   </header>
   <main>
     <div class="calculator_container">
-      <div class="calculator-display"></div>
+      <div class="calculator-display" id="calculator-display">
+        <p class="screen-value" id="screen-value">0</p>
+      </div>
       <div class="calculator-ctas_container">
-        <button class="cta-button symbols-cta"><i class="fa-solid fa-plus"></i></button>
-        <button class="cta-button symbols-cta"><i class="fa-solid fa-minus"></i></button>
-        <button class="cta-button symbols-cta"><i class="fa-solid fa-xmark"></i></button>
-        <button class="cta-button symbols-cta"><i class="fa-solid fa-divide"></i></button>
-        <button class="cta-button">7</button>
-        <button class="cta-button">8</button>
-        <button class="cta-button">9</button>
-        <button class="cta-button equal-cta"><i class="fa-solid fa-equals"></i></button>
-        <button class="cta-button">4</button>
-        <button class="cta-button">5</button>
-        <button class="cta-button">6</button>
-        <button class="cta-button">1</button>
-        <button class="cta-button">2</button>
-        <button class="cta-button">3</button>
-        <button class="cta-button">0</button>
-        <button class="cta-button">.</button>
-        <button class="cta-button">C</button>
+        <button class="cta-button symbols-cta" value="plus"><i class="fa-solid fa-plus"></i></button>
+        <button class="cta-button symbols-cta" value="minus"><i class="fa-solid fa-minus"></i></button>
+        <button class="cta-button symbols-cta" value="multiply"><i class="fa-solid fa-xmark"></i></button>
+        <button class="cta-button symbols-cta" value="divide"><i class="fa-solid fa-divide"></i></button>
+        <button class="cta-button" value="7">7</button>
+        <button class="cta-button" value="8">8</button>
+        <button class="cta-button" value="9">9</button>
+        <button class="cta-button equal-cta" value="equal"><i class="fa-solid fa-equals"></i></button>
+        <button class="cta-button" value="4">4</button>
+        <button class="cta-button" value="5">5</button>
+        <button class="cta-button" value="6">6</button>
+        <button class="cta-button" value="1">1</button>
+        <button class="cta-button" value="2">2</button>
+        <button class="cta-button" value="3">3</button>
+        <button class="cta-button" value="0">0</button>
+        <button class="cta-button" value="dot">.</button>
+        <button class="cta-button" value="delete">C</button>
       </div>
     </div>
   </main>
   <footer>
-
   </footer>
-  
 </body>
 </html>

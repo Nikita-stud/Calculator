@@ -27,12 +27,31 @@ main{
   border-radius: 22px;
 }
 .calculator-display{
+  padding: 25px;
   position: absolute;
   top: 0;
   width: 100%;
   height: 100px;
   background-color: rgb(31, 25, 25);
 }
+.screen-value{
+  position: absolute;
+  right: 25px;
+  background-color: rgb(31, 25, 25);
+  color: white;
+  font-size: 3rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+
+
+
+
 .calculator-ctas_container{
   position: absolute;
   top:100px;
