@@ -1,4 +1,3 @@
-// Step 1: Select required elements
 const resultScreen = document.getElementById("resultScreen");
 const buttons = document.querySelectorAll(".cta-button");
 
@@ -7,37 +6,32 @@ let firstOperand = null; // Stores the first number
 let operator = null; // Stores the operator
 let awaitingSecondOperand = false; // Tracks when awaiting the second number
 
-// Step 2: Add event listeners to buttons
 buttons.forEach(button => {
     button.addEventListener("click", () => {
       const value = button.value;
       console.log("Button clicked:", value);
   
-      // Step 3: Handle digit and decimal input
+      // Handle digit and decimal input
       if (!isNaN(value) || value === "dot") {
         console.log("1.");
         handleNumberInput(value);
       }
   
-      // Step 4: Handle operator input
       else if (["+", "-", "*", "/"].includes(value)) {
         console.log("2.");
         handleOperatorInput(value);
       }
   
-      // Step 5: Handle equal button
       else if (value === "=") {
         calculateResult();
       }
   
-      // Step 6: Handle clear (C)
       else if (value === "delete") {
         clearCalculator();
       }
     });
   });
 
-// Step 3: Update the display for numbers
 function handleNumberInput(value) {
     if (value === "dot" && currentInput.includes(".")) return; // Prevent multiple dots
     if (awaitingSecondOperand) {
@@ -57,6 +51,7 @@ function handleOperatorInput(selectedOperator) {
         operator = selectedOperator; // Change operator without calculating
         return;
     }
+
     if (!firstOperand && currentInput) {
         console.log("2.1");
         firstOperand = parseFloat(currentInput);
@@ -68,7 +63,6 @@ function handleOperatorInput(selectedOperator) {
     currentInput = ""; // Reset for the next input
   }
 
-  // Step 5: Calculate the result
 function calculateResult() {
     if (!operator || !firstOperand || !currentInput) return;
     const secondOperand = parseFloat(currentInput);
@@ -80,7 +74,6 @@ function calculateResult() {
     updateDisplay();
   }
 
-  // Step 5 (Helper): Perform basic arithmetic
 function performOperation(a, b, op) {
     switch (op) {
       case "+": return a + b;
@@ -91,7 +84,6 @@ function performOperation(a, b, op) {
     }
   }
   
-  // Step 6: Clear everything
   function clearCalculator() {
     currentInput = "";
     firstOperand = null;
@@ -100,7 +92,6 @@ function performOperation(a, b, op) {
     updateDisplay();
   }
 
-  // Utility: Update the display
 function updateDisplay() {
     resultScreen.textContent = currentInput || "0";
   }
