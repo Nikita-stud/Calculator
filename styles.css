@@ -1,4 +1,4 @@
-*{
+* {
   scroll-behavior: smooth;
   box-sizing: border-box;
   font-family: sans-serif, Arial, Helvetica;
@@ -10,13 +10,14 @@
   background-repeat: no-repeat;
 }
 
-main{
+main {
   display: grid;
   align-items: center;
   justify-content: center;
   height: 100vh;
   background-color: rgb(64, 91, 91);
 }
+
 .calculator_container{
   background-color: black;
   overflow: hidden;
@@ -26,6 +27,7 @@ main{
   border: 7px solid rgb(6, 6, 6);
   border-radius: 22px;
 }
+
 .calculator-display{
   padding: 25px;
   position: absolute;
@@ -34,6 +36,7 @@ main{
   height: 100px;
   background-color: rgb(31, 25, 25);
 }
+
 .screen-value{
   position: absolute;
   right: 25px;
@@ -46,12 +49,6 @@ main{
   justify-content: center;
 }
 
-
-
-
-
-
-
 .calculator-ctas_container{
   position: absolute;
   top:100px;
@@ -62,28 +59,35 @@ main{
   grid-template-columns: repeat(4, 1fr) ;
   grid-template-rows: repeat(5, 1fr);
 }
+
 .cta-button{
   cursor: pointer;
   background-color: rgb(248, 243, 243);
   font-size: 2rem;
 }
+
 .cta-button:hover{
   background-color: rgb(230, 227, 227);
 }
+
 .symbols-cta{
   background-color: rgb(186, 183, 183);
 }
+
 .symbols-cta i, .equal-cta i{
   background: none;
 }
+
 .symbols-cta:hover{
   background-color: rgb(170, 167, 167);
 }
+
 .equal-cta{
   grid-row: 2/6;
   grid-column: 4/5;
   background-color: rgb(250, 111, 19);
 }
+
 .equal-cta:hover{
   background-color: rgb(229, 102, 17);
 }
