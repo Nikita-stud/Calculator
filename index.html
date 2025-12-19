@@ -5,19 +5,20 @@
   <meta name="description" content="I ve made my own calculator that does basic math using js">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Calculator</title>
   <link rel="stylesheet" href="styles.css">
   <script src="https://kit.fontawesome.com/54f19440a6.js" crossorigin="anonymous"></script>
-  <script defer src="calculatos.js"></script>
+  <script defer src="calculator.js" type="module"></script>
 </head>
 <body>
-  <header>
-  </header>
   <main>
     <div class="calculator_container">
-      <div class="calculator-display" id="calculator-display">
-        <p class="screen-value" id="screen-value">0</p>
+      <!-- Result Screen -->
+      <div class="calculator-display" id="resultScreenContainer">
+        <p class="screen-value" id="resultScreen">0</p>
       </div>
+
+      <!-- Calculator Buttons -->
       <div class="calculator-ctas_container">
         <button class="cta-button symbols-cta" value="+"><i class="fa-solid fa-plus"></i></button>
         <button class="cta-button symbols-cta" value="-"><i class="fa-solid fa-minus"></i></button>
@@ -39,7 +40,5 @@
       </div>
     </div>
   </main>
-  <footer>
-  </footer>
 </body>
 </html>
